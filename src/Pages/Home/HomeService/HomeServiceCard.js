@@ -4,7 +4,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
 
-const ServiceCard = ({ service }) => {
+const HomeServiceCard = ({ service }) => {
     const { _id, img, title, price,Rating,description } = service;
     console.log(service);
     return (
@@ -29,8 +29,10 @@ const ServiceCard = ({ service }) => {
                     </div>
                 </div>
             </div>
+
+          
         </div>
     );
 };
 
-export default ServiceCard;
+export default HomeServiceCard;

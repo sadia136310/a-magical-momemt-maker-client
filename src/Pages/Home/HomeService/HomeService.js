@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import ServiceCard from './ServiceCard';
+import { Link } from 'react-router-dom';
+import HomeServiceCard from './HomeServiceCard';
 
-const Services = () => {
+
+
+const HomeService = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/AllServices')
+        fetch('http://localhost:5000/HomeServices')
             .then(res => res.json())
             .then(data => setServices(data))
 
@@ -16,14 +19,21 @@ const Services = () => {
             <h3 className='text-3xl font-bold text-center'>Let's Checkout our services</h3>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20 mx-10'>
                 {
-                    services.map(service => <ServiceCard
+                    services.map(service => <HomeServiceCard
                         key={service._id}
                         service={service}
-                    ></ServiceCard>)
+                    ></HomeServiceCard>)
                 }
+
+
+
             </div>
+            <div className='text-center pb-9' >
+                <Link to="/services"> <button className="btn btn-warning btn-outline">See All</button></Link>
+            </div>
+
         </div>
     );
 };
 
-export default Services;
+export default HomeService;
