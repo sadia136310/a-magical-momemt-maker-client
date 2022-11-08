@@ -6,8 +6,9 @@ const Header = () => {
     const menuItems = <>
         <li> <Link to='/'>Home</Link></li>
         <li> <Link to='/services'>Services</Link></li>
-        <li> <Link to='/'>Home</Link></li>
         <li> <Link to='/blog'>Blog</Link></li>
+        <li> <Link to='/login'>Login</Link></li>
+      
     </>
     return (
         <div className="navbar bg-sky-200">
