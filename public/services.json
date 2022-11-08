@@ -1,0 +1,62 @@
+[
+    {
+       
+        "service_id": "01",
+        "title": "Fashion Photography",
+        "img": "https://www.jdinstitute.edu.in/media/2021/07/Types-of-Fashion-Photography-Thumbnail.jpg",
+        "Rating": "4",
+        "price": "20",
+        "description": "Fashion photography focuses on the display of fashion clothing and items. It is most common on advertising boards and in fashion magazines. The photography will usually feature models wearing the display items.Fashion photography has existed almost as long as photography itself has been around. This type of photography has always changed with the times. Understanding new trends, creating new ones, and using past ones as inspiration are important techniques to learn. Photographers don’t just ensure that the correct photo has been taken; they also check the clothing, hair, and make-up of models.Magazines such as Vogue, Marie Claire, Harper’s Bazaar and more have budgets of millions of dollars to photograph in luxurious destinations."
+       
+    },
+    {
+       
+        "service_id": "02",
+        "title": "Family Photography",
+        "img": "https://www.journeyofparenthood.com/wp-content/uploads/2021/06/32B32576-E2EA-41D6-99FF-B66F33F593CA-scaled.jpeg",
+        "Rating": "4.3",
+        "price": "25",
+        "description": "Family photography is a type of photography that documents families, in all of their forms. The definition of family is so flexible and can include everything from a couple to a huge extended family group with grandparents and cousins. Some families like to bring pets into the mix too. Family can also mean your chosen family, in whatever form that takes. No matter how to define family, this photography style is about documenting special moments in life and capturing the essence and personality of a family."
+       
+    },
+    {
+       
+        "service_id": "03",
+        "title": "Wedding Photography",
+        "img": "https://www.wedding-spot.com/blog/sites/wsblog/files/images/migrated/258-wedding%2Bphotographer%2Btaking%2Bpictures%2Bof%2Bbride%2Bposing%2Bon%2Bground%2Bin%2Bwedding%2Bdress.jpg",
+        "Rating": "4.8",
+        "price": "50",
+        "description": "One of the more difficult decisions to make when planning a wedding is choosing your photographer — not only because there are so many talented artists to choose from, but because each photographer has their own unique style. Do you prefer a more traditional look? Do you want your photos to appear as though they came straight out of Vogue? Somewhere in between? Don’t worry: That’s where we come in. Keep reading to learn all about the most popular wedding photography styles and what sets them apart from the rest.When it comes to understanding wedding photography styles, there are three main components to keep in mind.When you envision wedding photos, the traditional/classic style is most likely the style you see. These are normally formal, posed photos taken at eye level. Think family and wedding party portraits that you’d put in a photo album. While the term traditional can have a negative connotation, this photo style stands the test of time because of its classic look, and it’s common for at least some of your wedding photos to be shot this way."
+       
+    },
+    {
+       
+        "service_id": "04",
+        "title": "Product Photography",
+        "img": "https://cherrydeck-blog.b-cdn.net/blog/wp-content/uploads/2021/12/Rita-W.-Batalha.jpg",
+        "Rating": "4.5",
+        "price": "29",
+        "description": "Product photography is any image of a good for sale. Also known as commercial photography, these images are meant to entice shoppers to purchase the photographed products. They feature product details and features, supplemental to written copy and product descriptions. The idea is to give potential buyers a full impression of the product.The ultimate goal in product photography is to capture a realistic image of the item. This enables potential buyers to be able to get an idea of what the product is like. This is important since the buyer will not have an opportunity to examine the item in person.Product design is the process designers use to blend user needs with business goals to help brands make consistently successful products. Product designers work to optimize the user experience in the solutions they make for their users—and help their brands by making products sustainable for longer-term business needs.."
+       
+    },
+    {
+       
+        "service_id": "05",
+        "title": "Vedio shooting",
+        "img": "https://cdn0.weddingwire.in/vendor/7071/3_2/960/jpg/dsc-3116-copy1_15_187071-1552391906.jpeg",
+        "Rating": "4.9",
+        "price": "80",
+        "description": "While both capture motion pictures, the differences between cinematography and videography are dependent on a few factors. To find out what approach best fits your project, consider the size and scope of the work, the size of crew, the amount of pre-production needed (such as creative brainstorming, writing scripts, creating storyboards, etc.), and who’s in charge of creative direction.When it comes to the scope of the work, whether it’s a concert, news piece, or special occasion like a family reunion or birthday, videography is ideal for documenting dynamic situations and supports a sense of spontaneity.“Videography is geared toward live events or weddings, or something that’s not necessarily planned with a giant crew or any filmmaking setup that you usually see in a movie,” says professional filmmaker Whit Ingram. “It’s usually a broadcasting camera, which works better in a run-and-gun-type shoot, where you do not necessarily know what you’re shooting until you start.”While the actual video production is often smaller scale, don’t let that description fool you. “Videography has this connotation that you don’t work on big projects, but that’s not true,” cinematographer Josh Miller adds. Videographers work on smaller teams or, at times, by themselves, but they can and will get asked to work on complex projects with a broad reach, like corporate training videos, capturing sports events, and aerial drone footage. ."
+       
+    },
+    {
+       
+        "service_id": "06",
+        "title": "Birthday Photography",
+        "img": "https://i.pinimg.com/736x/27/65/bc/2765bccac6e3c08654637cb72b4bb569.jpg",
+        "Rating": "4.7",
+        "price": "30",
+        "description": "Would You Like to Take Dreamy Child Portraits Like This?The best time for a close-up photograph is when the children are sitting down opening presents or blowing out the candles on their cake. Take a few photos from the side and focus on the child’s face. Use a shallow depth of field to keep the background out of focus. You want to keep the shutter speed at 1/160th of a second to keep everything sharp, but also capture some of the smoke trails coming from the candles. Use a higher ISO setting if you are indoors as there is less light.Candid shots are some of the best images you can take at a birthday party. Certainly, people expect the obvious shots of the birthday child with the cake. You should try to capture a shot of each child at the party as well. Use a telephoto zoom lens to focus in on the children inconspicuously – set the aperture to f/4 to blur out distractions, and use a reasonable shutter speed of 1/125th of a second to keep things sharp. Remember if you are indoors use an ISO of 400 or higher so you have sufficiently fast shutter speeds. Use the spot metering mode and meter on the child’s face."
+       
+    }
+]
