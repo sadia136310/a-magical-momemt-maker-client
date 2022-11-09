@@ -29,6 +29,16 @@ const Review = () => {
             Rating,
             message
         }
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
 
     }
     return (
@@ -42,7 +52,7 @@ const Review = () => {
 
                         <input name="image" type="text" placeholder="Image" className="input input-ghost w-full  input-bordered" required />
 
-                        <input name="rating" type="text" placeholder="Rating" className="input input-ghost w-full  input-bordered" required/>
+                        <input name="rating" type="text" placeholder="Rating" className="input input-ghost w-full  input-bordered" required />
 
                         <input name="email" defaultValue={user?.email} type="text" placeholder="Your email" className="input input-ghost w-full  input-bordered" readOnly />
                     </div>
