@@ -10,6 +10,7 @@ import Services from "../../Pages/Services/Services";
 import SignUp from "../../Pages/SignUp/SignUp";
 import ServicesDetails from "../../Pages/ServicesDetails/ServicesDetails";
 import Review from "../../Pages/Review/Review";
+import ReviewsShow from "../../Pages/Review/ReviewsShow";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
 
 
             },
+            {
+                path: '/reviews',
+                element: <ReviewsShow></ReviewsShow>
+            },
+            
 
             {
                 path: '/blog',
