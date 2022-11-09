@@ -13,6 +13,7 @@ import Review from "../../Pages/Review/Review";
 import ReviewsShow from "../../Pages/Review/ReviewsShow";
 import Edit from "../../Pages/Edit/Edit";
 import ReviewAll from "../../Pages/ReviewAll/ReviewAll";
+import AddServices from "../../Pages/AddService/AddServices";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
                 element:<Edit></Edit>,
                 loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
 
+            },
+            {
+                path: '/add',
+                element: <AddServices></AddServices>
             },
             {
                 path: '/reviews',

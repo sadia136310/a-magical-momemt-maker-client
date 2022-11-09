@@ -23,11 +23,12 @@ const ServicesDetails = () => {
                 </div>
             </div>
 
-           <ReviewAll></ReviewAll>
+           
             <div className='text-center my-7'>
 
                 <Link to={`/review/${_id}`}>  <button className="btn btn-outline btn-warning">Add Review</button></Link>
             </div>
+            <ReviewAll></ReviewAll>
 
         </div>
     );

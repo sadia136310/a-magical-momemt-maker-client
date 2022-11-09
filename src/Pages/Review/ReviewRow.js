@@ -32,12 +32,14 @@ const ReviewRow = ({ review, handleDelete }) => {
                     </div>
                 </td>
                 <td>
+                <div className="text-sm opacity-50">text-review</div>
                     <div className="font-bold">{message}</div>
+                    
                  
                 </td>
                 <th>
                         <label>
-                            <Link to={`/edit/${_id}`}>   <button className="btn btn-outline btn-warning">Edit</button></Link>
+                            <Link to={`/edit/${_id}`}><button className="btn btn-outline btn-warning">Edit</button></Link>
                         </label>
                     </th>
             </tr>

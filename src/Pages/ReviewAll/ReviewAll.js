@@ -18,7 +18,7 @@ const ReviewAll = () => {
 
     return (
         <div className='my-10'>
-            <h1 className='text-center text-3xl '>Reviews are Here!!.</h1>
+            <h1 className='text-center text-3xl text-purple-400 '>All Reviews are Here!!.</h1>
 
             <div className="overflow-x-auto">
                 <table className="table ">
