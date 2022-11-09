@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Review = () => {
-    const { img, title, price, Rating, description, _id } = useLoaderData();
+    const { img, title, price, Rating,_id } = useLoaderData();
     const { user } = useContext(AuthContext);
 
 
@@ -25,8 +25,8 @@ const Review = () => {
             price,
             customer: name,
             email,
-            img,
-            Rating,
+            image:image,
+            rating,
             message
         }
         fetch('http://localhost:5000/reviews', {

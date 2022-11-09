@@ -1,36 +1,40 @@
-import React from 'react';
-
 const ReviewRow = ({ review }) => {
-    const { serviceName, price, email, customer, Rating } = review;
+    const { serviceName, price, image, customer, rating} = review;
+    
     return (
         <div>
             <tr>
                 <th>
                     <label>
-                        <input type="checkbox" className="checkbox" />
+                        <button className="btn btn-outline btn-warning">Delete</button>
                     </label>
                 </th>
                 <td>
                     <div className="flex items-center space-x-3">
                         <div className="avatar">
                             <div className="mask mask-squircle w-12 h-12">
-                                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
+                              
+                             
+                              <img src={image} alt="" />
+                           
                             </div>
                         </div>
                         <div>
                             <div className="font-bold">{customer}</div>
-                            <div className="text-sm opacity-50">{Rating}</div>
+                            <div className="text-sm opacity-50">{rating}</div>
                         </div>
                     </div>
                 </td>
                 <td>
                     <div className="font-bold">{serviceName}</div>
-                    <div className="text-sm opacity-50">{price}</div>
+                    <div className="text-sm opacity-50">{price}$</div>
                 </td>
                 <td>
-                    <div className="font-bold">
-                    Edit
-                    </div>
+                <th>
+                    <label>
+                        <button className="btn btn-outline btn-warning">Edit</button>
+                    </label>
+                </th>
                 </td>
             </tr>
         </div>
