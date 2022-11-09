@@ -25,7 +25,7 @@ const ServiceCard = ({ service }) => {
                     <p>Rating: {Rating}</p>
                   <p>  {description.slice(0,100) + '.......'}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/checkout/${_id}`}>  <button className="btn btn-outline btn-warning">View Details</button></Link>
+                        <Link to={`/services/${_id}`}>  <button className="btn btn-outline btn-warning">View Details</button></Link>
                     </div>
                 </div>
             </div>

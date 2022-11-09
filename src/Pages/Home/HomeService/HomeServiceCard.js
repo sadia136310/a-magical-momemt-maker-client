@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 
 const HomeServiceCard = ({ service }) => {
-    const { _id, img, title, price,Rating,description } = service;
+    const { _id, img, title, price, Rating, description } = service;
     console.log(service);
     return (
         <div>
@@ -14,7 +14,7 @@ const HomeServiceCard = ({ service }) => {
 
                 <PhotoProvider>
                     <PhotoView src={img}>
-                    <figure><img src={img} alt='' /></figure>
+                        <figure><img src={img} alt='' /></figure>
                     </PhotoView>
                 </PhotoProvider>
 
@@ -23,14 +23,13 @@ const HomeServiceCard = ({ service }) => {
                     <h2 className="card-title">{title}</h2>
                     <p className='text-xl text-orange-600 font-semibold'>Price: ${price}</p>
                     <p>Rating: {Rating}</p>
-                  <p>  {description.slice(0,100) + '.......'}</p>
+                    <p>  {description.slice(0, 100) + '.......'}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/checkout/${_id}`}>  <button className="btn btn-outline btn-warning">View Details</button></Link>
+                        <Link to={`/services/${_id}`}>  <button className="btn btn-outline btn-warning">View Details</button></Link>
                     </div>
                 </div>
             </div>
 
-          
         </div>
     );
 };
