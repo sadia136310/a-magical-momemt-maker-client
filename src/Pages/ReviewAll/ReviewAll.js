@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-
-import ReviewRow from '../Review/ReviewRow';
+import ReviewAllRow from './ReviewAllRow';
 
 const ReviewAll = () => {
     const { service } = useLoaderData();
@@ -27,11 +26,11 @@ const ReviewAll = () => {
 
 
                         {
-                            reviews.map(review => <ReviewRow
+                            reviews.map(review => <ReviewAllRow
                                 key={review._id}
                                 review={review}
 
-                            ></ReviewRow>)
+                            ></ReviewAllRow>)
                         }
 
                     </tbody>
