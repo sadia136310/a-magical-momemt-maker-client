@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 const ReviewRow = ({ review, handleDelete }) => {
-    const { _id, serviceName, price, image, customer, rating } = review;
+    const { _id,  image, customer, rating,message } = review;
 
 
 
@@ -27,21 +27,19 @@ const ReviewRow = ({ review, handleDelete }) => {
                         </div>
                         <div>
                             <div className="font-bold">{customer}</div>
-                            <div className="text-sm opacity-50">{rating}</div>
+                            <div className="text-sm opacity-50">Rating: {rating}</div>
                         </div>
                     </div>
                 </td>
                 <td>
-                    <div className="font-bold">{serviceName}</div>
-                    <div className="text-sm opacity-50">{price}$</div>
+                    <div className="font-bold">{message}</div>
+                 
                 </td>
-                <td>
-                    <th>
+                <th>
                         <label>
                             <Link to={`/edit/${_id}`}>   <button className="btn btn-outline btn-warning">Edit</button></Link>
                         </label>
                     </th>
-                </td>
             </tr>
         </div>
     );

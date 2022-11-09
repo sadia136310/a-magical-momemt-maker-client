@@ -4,9 +4,11 @@ import { Link, useLoaderData } from 'react-router-dom';
 const ServicesDetails = () => {
     const { img, title, price, Rating, description, _id } = useLoaderData();
 
-   
+
     return (
         <div>
+
+
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <img className='w-96' src={img} alt="" />
@@ -20,10 +22,11 @@ const ServicesDetails = () => {
                 </div>
             </div>
 
-            <div className='text-center my-5'>
+            <div className='text-center my-7'>
 
-            <Link to={`/review/${_id}`}>  <button className="btn btn-outline btn-warning">Add Review</button></Link>
+                <Link to={`/review/${_id}`}>  <button className="btn btn-outline btn-warning">Add Review</button></Link>
             </div>
+
         </div>
     );
 };
