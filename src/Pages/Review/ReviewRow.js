@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ReviewRow = ({ review, handleDelete }) => {
@@ -37,7 +38,7 @@ const ReviewRow = ({ review, handleDelete }) => {
                 <td>
                     <th>
                         <label>
-                            <button className="btn btn-outline btn-warning">Edit</button>
+                            <Link to={`/edit/${_id}`}>   <button className="btn btn-outline btn-warning">Edit</button></Link>
                         </label>
                     </th>
                 </td>

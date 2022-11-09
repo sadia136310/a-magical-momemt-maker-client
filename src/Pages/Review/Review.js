@@ -50,6 +50,7 @@ const Review = () => {
     return (
         <div>
             <div className='my-12 mx-9'>
+                <h2 className='text-center text-3xl text-pink-300 py-7'>You can Review here!!!</h2>
                 <form onSubmit={handleReview}>
 
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
