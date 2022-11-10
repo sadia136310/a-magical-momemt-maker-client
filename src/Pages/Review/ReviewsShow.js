@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import ReviewRow from './ReviewRow';
 
 const ReviewsShow = () => {
@@ -30,7 +31,7 @@ const ReviewsShow = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                       alert('deleted successfully!')
+                       toast.success('deleted successfully!')
                    
                         const remaining = reviews.filter(rev => rev._id !== id);
                         setReviews(remaining);
@@ -38,6 +39,7 @@ const ReviewsShow = () => {
                 })
         }
     }
+    useTitle('My Reviews')
     return (
         <div className='my-20 py-20'>
             {

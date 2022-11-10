@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hooks/useTitle';
+import Loader from '../Loader/Loader';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-
+const [loading,setLoading]=useState(false);
     useEffect(() => {
+        setLoading(true)
         fetch('http://localhost:5000/AllServices')
             .then(res => res.json())
             .then(data => setServices(data))
+            setLoading(false)
 
     }, []);
+    useTitle('Services');
+    if(loading){
+        return <Loader></Loader>
+    }
     return (
         <div>
             <h3 className='text-xl font-bold text-center text-purple-400'>Services</h3>

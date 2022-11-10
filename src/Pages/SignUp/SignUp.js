@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import img from '../../images/login.jpg'
 
 
@@ -12,7 +13,7 @@ const SignUp = () => {
     const navigate=useNavigate();
     const from = location.state?.from?.pathname || "/";
   
-    
+    useTitle('Sign Up')
     const handleSignIn = event => {
         event.preventDefault();
         const form = event.target;

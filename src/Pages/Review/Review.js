@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
+
 
 const Review = () => {
     const { title, price, _id } = useLoaderData();
@@ -51,6 +53,7 @@ const Review = () => {
             .catch(error => console.error(error));
 
     }
+    useTitle('Review here')
     return (
         <div>
             <div className='my-12 mx-9'>
