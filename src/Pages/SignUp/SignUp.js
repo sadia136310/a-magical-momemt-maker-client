@@ -24,6 +24,19 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+
+            fetch('http://localhost:5000/jwt',{
+                method:"POST",
+                headers:{
+                  'content-type' : 'application/json'
+                },
+                body:JSON.stringify({user:user.email})
+              })
+              .then(res=>res.json())
+              .then(data=>{
+                localStorage.setItem('momentJwt-token',data.token)
+              })
+              .catch(e=>console.error(e))  
             navigate(from, { replace: true });
             setError('');
             form.reset();

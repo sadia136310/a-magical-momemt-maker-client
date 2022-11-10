@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Review = () => {
-    const { img, title, price, Rating,_id } = useLoaderData();
+    const { title, price, _id } = useLoaderData();
     const { user } = useContext(AuthContext);
 
 
@@ -25,7 +26,7 @@ const Review = () => {
             price,
             customer: name,
             email,
-            image:image,
+            image: image,
             rating,
             message,
             date
@@ -40,10 +41,12 @@ const Review = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-            if(data.acknowledged){
-                alert('Review Added Successfully!');
-                form.reset();
-            }
+                if (data.acknowledged) {
+                  
+                    alert('Successfully Added Review!');
+
+                    form.reset();
+                }
             })
             .catch(error => console.error(error));
 

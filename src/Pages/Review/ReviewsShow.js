@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewRow from './ReviewRow';
 
@@ -9,7 +10,11 @@ const ReviewsShow = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+            headers:{
+                authorization : `Bearer ${localStorage.getItem('momentJwt-token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email]);
@@ -25,7 +30,8 @@ const ReviewsShow = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                       alert('deleted successfully!')
+                   
                         const remaining = reviews.filter(rev => rev._id !== id);
                         setReviews(remaining);
                     }
@@ -37,7 +43,7 @@ const ReviewsShow = () => {
             {
 
                 reviews.length === 0 ?
-                    <p > There is no review</p>
+                    <p className='text-center text-3xl'> There is no review</p>
 
                     :
                     <div className="overflow-x-auto lg:mx-24">

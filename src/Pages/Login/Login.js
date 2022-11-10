@@ -1,14 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { GoogleAuthProvider } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import img from '../../images/login.jpg'
 
 
 const Login = () => {
 
-    const { signIn,providerLogin } = useContext(AuthContext);
+    const { signIn, providerLogin } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = event => {
         event.preventDefault();
@@ -19,9 +23,24 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+
+
+                fetch('http://localhost:5000/jwt', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify({ user: user.email })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        localStorage.setItem('momentJwt-token', data.token)
+                    })
+                    .catch(e => console.error(e))
+                navigate(from, { replace: true });
                 setError('');
                 form.reset();
+
             })
             .catch(error => {
 
@@ -29,6 +48,8 @@ const Login = () => {
                 setError(error.message)
 
             })
+
+
 
     }
 
@@ -38,8 +59,10 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-               
+                navigate(from, { replace: true });
+
             })
+            
             .catch(error => console.error(error))
     }
     return (
@@ -74,11 +97,11 @@ const Login = () => {
                         </form>
                         <p className='text-center'>New to Moment Maker?<Link className='text-purple-400 font-bold' to='/signup'>Sign Up</Link> </p>
 
-                        
+
                         <button onClick={handleGoogleSignIn} className="btn btn-outline btn-warning mx-20 mt-4">Login With Google</button>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     );
