@@ -13,7 +13,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || "/";
 
-    useTitle('Sign Up')
+    useTitle('SignI Up')
     const handleSignIn = event => {
         event.preventDefault();
         const form = event.target;
@@ -26,7 +26,7 @@ const SignUp = () => {
                 const user = result.user;
                 console.log(user);
                 // get jwt token
-                fetch('https://a-magical-momemt-maker-server.vercel.app/jwt', {
+                fetch('http://localhost:5000/jwt', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

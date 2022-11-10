@@ -26,7 +26,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
 
-                // jewt token
+                // jwt token
                 fetch('https://a-magical-momemt-maker-server.vercel.app/jwt', {
                     method: "POST",
                     headers: {
@@ -105,7 +105,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" name='password' className="input input-bordered" />
+                                <input type="password" placeholder="password" name='password' className="input input-bordered" />
 
                             </div>
                             <div className="form-control mt-6">
