@@ -8,7 +8,7 @@ const HomeService = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/HomeServices')
+        fetch('https://a-magical-momemt-maker-server.vercel.app/HomeServices')
             .then(res => res.json())
             .then(data => setServices(data))
 

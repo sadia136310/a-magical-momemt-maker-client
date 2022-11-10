@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import useTitle from '../../hooks/useTitle';
 
 const AddServices = () => {
@@ -23,7 +24,7 @@ const AddServices = () => {
             Rating:rating,
             description,
         }
-        fetch('http://localhost:5000/add', {
+        fetch('https://a-magical-momemt-maker-server.vercel.app/add', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +35,7 @@ const AddServices = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Added Successfully!');
+                    toast('Added Successfully!');
                     form.reset();
                 }
             })

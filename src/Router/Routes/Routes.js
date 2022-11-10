@@ -38,28 +38,28 @@ const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <ServicesDetails></ServicesDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/AllServices/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-magical-momemt-maker-server.vercel.app/AllServices/${params.id}`)
 
 
             },
             {
                 path: '/review/:id',
                 element: <Review></Review>,
-                loader: ({ params }) => fetch(`http://localhost:5000/AllServices/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-magical-momemt-maker-server.vercel.app/AllServices/${params.id}`)
 
 
             },
             {
                 path: '/services/:id',
                 element: <ReviewAll></ReviewAll>,
-                loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-magical-momemt-maker-server.vercel.app/review/${params.id}`)
 
 
             },
             {
                 path: '/edit/:id',
                 element:<Edit></Edit>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://a-magical-momemt-maker-server.vercel.app/reviews/${params.id}`)
 
             },
             {

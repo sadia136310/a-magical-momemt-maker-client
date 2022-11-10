@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
@@ -33,7 +33,7 @@ const Review = () => {
             message,
             date
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://a-magical-momemt-maker-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const Review = () => {
                 console.log(data)
                 if (data.acknowledged) {
                   
-                    alert('Successfully Added Review!');
+                    toast('Successfully Added Review!');
 
                     form.reset();
                 }
@@ -56,7 +56,10 @@ const Review = () => {
     useTitle('Review here')
     return (
         <div>
-            <div className='my-12 mx-9'>
+            {
+                user?.email ?
+                <div className='my-12 mx-9'>
+
                 <h2 className='text-center text-3xl text-pink-300 py-7'>You can Review here!!!</h2>
                 <form onSubmit={handleReview}>
 
@@ -76,6 +79,15 @@ const Review = () => {
                     <input className='btn btn-outline btn-warning' type="submit" value="Add Your Review here" />
                 </form>
             </div>
+            :
+        <div className='text-center my-20'>
+              <p className='text-5xl text-purple-300 text-bold'>Please Login First!!</p>
+              
+            
+              <Link to='/login'><button className="btn btn-warning btn-outline  my-20">Login Here</button></Link>
+        </div>
+            }
+            
         </div>
     );
 };

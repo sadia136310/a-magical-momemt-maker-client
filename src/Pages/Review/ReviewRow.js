@@ -13,7 +13,7 @@ const ReviewRow = ({ review, handleDelete }) => {
             <tr>
                 <th>
                     <label>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-outline btn-warning">X</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-outline btn-warning">Delete</button>
                     </label>
                 </th>
                 <td>
@@ -27,7 +27,7 @@ const ReviewRow = ({ review, handleDelete }) => {
                         </div>
                         <div>
                             <div className="font-bold">{customer}</div>
-                            <div className="text-sm opacity-50">{rating}</div>
+                            <div className="text-sm opacity-50">Rating{rating}</div>
                         </div>
                     </div>
                 </td>

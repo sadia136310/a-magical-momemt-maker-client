@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Edit = () => {
@@ -9,7 +10,7 @@ const Edit = () => {
     const handleReviewUpdate = (event) => {
         event.preventDefault();
         
-        fetch(`http://localhost:5000/reviews/${storedReview._id}`, {
+        fetch(`https://a-magical-momemt-maker-server.vercel.app/reviews/${storedReview._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -20,7 +21,7 @@ const Edit = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('review updated');
+                    toast('review updated');
                     console.log(data);
                     navigate('/reviews')
 

@@ -11,7 +11,7 @@ const ReviewsShow = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+        fetch(`https://a-magical-momemt-maker-server.vercel.app/reviews?email=${user?.email}`,{
             headers:{
                 authorization : `Bearer ${localStorage.getItem('momentJwt-token')}`
             }
@@ -24,7 +24,7 @@ const ReviewsShow = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure,you want to cancel this review?");
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://a-magical-momemt-maker-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ const ReviewsShow = () => {
             {
 
                 reviews.length === 0 ?
-                    <p className='text-center text-3xl'> There is no review</p>
+                    <p className='text-center text-3xl text-purple-300'> There is no review here!!</p>
 
                     :
                     <div className="overflow-x-auto lg:mx-24">

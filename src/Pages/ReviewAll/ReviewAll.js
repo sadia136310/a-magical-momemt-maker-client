@@ -9,7 +9,7 @@ const ReviewAll = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?serviceId=${service}`)
+        fetch(`https://a-magical-momemt-maker-server.vercel.app/review?serviceId=${service}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [service]);

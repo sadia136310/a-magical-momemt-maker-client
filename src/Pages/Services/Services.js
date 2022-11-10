@@ -8,7 +8,7 @@ const Services = () => {
 const [loading,setLoading]=useState(false);
     useEffect(() => {
         setLoading(true)
-        fetch('http://localhost:5000/AllServices')
+        fetch('https://a-magical-momemt-maker-server.vercel.app/AllServices')
             .then(res => res.json())
             .then(data => setServices(data))
             setLoading(false)

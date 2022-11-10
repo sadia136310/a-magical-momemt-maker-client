@@ -27,7 +27,7 @@ const Login = () => {
                 const user = result.user;
 
                 // jewt token
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://a-magical-momemt-maker-server.vercel.app/jwt', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -61,8 +61,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
 
-
-                fetch('http://localhost:5000/jwt', {
+                // get jwt token
+                fetch('https://a-magical-momemt-maker-server.vercel.app/jwt', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
