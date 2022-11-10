@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Edit = () => {
     const storedReview = useLoaderData();
     const [update, setUpdate] = useState(storedReview);
-
+    const navigate = useNavigate()
 
     const handleReviewUpdate = (event) => {
         event.preventDefault();
@@ -22,7 +22,8 @@ const Edit = () => {
                 if (data.modifiedCount > 0) {
                     alert('review updated');
                     console.log(data);
-                 
+                    navigate('/reviews')
+
                 }
 
             })

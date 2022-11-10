@@ -18,7 +18,7 @@ const Review = () => {
 
         console.log(name, email, image, rating, message);
 
-
+        const date = new Date().toLocaleString();
         const review = {
             service: _id,
             serviceName: title,
@@ -27,7 +27,8 @@ const Review = () => {
             email,
             image:image,
             rating,
-            message
+            message,
+            date
         }
         fetch('http://localhost:5000/reviews', {
             method: 'POST',

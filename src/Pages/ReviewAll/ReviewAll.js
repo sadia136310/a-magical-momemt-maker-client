@@ -17,14 +17,12 @@ const ReviewAll = () => {
 
     return (
         <div className='my-10'>
-            <h1 className='text-center text-3xl text-purple-400 '>All Reviews are Here!!.</h1>
+            <h1 className='lg:mx-24 text-3xl text-purple-400 '>All Reviews are Here!!.</h1>
 
-            <div className="overflow-x-auto">
-                <table className="table ">
+            <div className="overflow-x-auto lg:mx-24">
+                <table className="table">
 
                     <tbody>
-
-
                         {
                             reviews.map(review => <ReviewAllRow
                                 key={review._id}

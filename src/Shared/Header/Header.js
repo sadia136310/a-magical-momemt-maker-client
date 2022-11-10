@@ -13,22 +13,22 @@ const Header = () => {
 
     const menuItems = <>
         <li className="font-semibold" > <Link to='/'>Home</Link></li>
-        <li className="font-semibold" > <Link to='/services'>Services</Link></li>
+
         <li className="font-semibold" > <Link to='/blog'>Blog</Link></li>
+        <li className='font-semibold'><Link to='/add'>Add Service</Link></li>
+        <li className='font-semibold'><Link to='/reviews'>My Reviews</Link></li>
         {
             user?.email ?
                 <>
-                    <li className='font-semibold'><Link to='/add'>Add Service</Link></li>
-                    <li className='font-semibold'><Link to='/reviews'>Reviews</Link></li>
                     <li className='font-semibold'>
-                        <button onClick={ handleLogOut } className='btn-ghost'>Sign Out</button>
+                        <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
                     </li>
                 </>
                 :
                 <li className='font-semibold'><Link to='/login'>Login</Link></li>
         }
-       
-      
+
+
     </>
     return (
         <div className="navbar bg-sky-200">

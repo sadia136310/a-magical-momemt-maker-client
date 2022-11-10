@@ -33,27 +33,35 @@ const ReviewsShow = () => {
         }
     }
     return (
-        <div className='lg:mx-20 my-20 py-20'>
-            <h1 className='text-center text-5xl'>Here is {reviews.length} review.</h1>
+        <div className='my-20 py-20'>
+            {
 
-            <div className="overflow-x-auto">
-                <table className="table ">
+                reviews.length === 0 ?
+                    <p > There is no review</p>
 
-                    <tbody>
+                    :
+                    <div className="overflow-x-auto lg:mx-24">
+                        <table className="table">
+
+                            <tbody>
 
 
-                        {
-                            reviews.map(review => <ReviewRow
-                                key={review._id}
-                                review={review}
-                                handleDelete={handleDelete}
-                            ></ReviewRow>)
-                        }
+                                {
+                                    reviews.map(review => <ReviewRow
+                                        key={review._id}
+                                        review={review}
+                                        handleDelete={handleDelete}
+                                    ></ReviewRow>)
+                                }
 
-                    </tbody>
+                            </tbody>
 
-                </table>
-            </div>
+                        </table>
+                    </div>
+            }
+
+
+
         </div>
     );
 };

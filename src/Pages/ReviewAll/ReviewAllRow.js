@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const ReviewAllRow = ({review}) => {
-    const {image, customer, rating,message } = review;
+const ReviewAllRow = ({ review }) => {
+    const { image, customer, rating, message } = review;
 
     return (
         <div>
@@ -24,13 +24,15 @@ const ReviewAllRow = ({review}) => {
                     </div>
                 </td>
                 <td>
-                <div className="text-sm opacity-50">text-review</div>
+                <div className="text-sm opacity-50">review</div>
                     <div className="font-bold">{message}</div>
-                    
-                 
+
+
                 </td>
             </tr>
         </div>
+
+       
     );
 };
 
